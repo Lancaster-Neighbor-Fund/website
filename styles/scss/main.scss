@@ -1,0 +1,445 @@
+$bp-small: 48rem;
+$bp-medium: 64rem;
+$bp-large: 88rem;
+
+@import './colors';
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+
+// Basic Elements
+
+a {
+  color: darken($color-primary, 24%);
+  text-decoration: none;
+  transition: color .16s ease-in-out;
+  font-weight: bold;
+
+  &.-secondary {
+    color: $color-secondary;
+  }
+
+  &:hover {
+    color: $color-primary;
+  }
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  font-family: 'Asap', sans-serif;
+  font-size: 16px;
+}
+
+.button {
+  border: none;
+  border-radius: .2rem;
+  font-size: 1.2rem;
+  padding: 1rem;
+  font-weight: 600; // semi
+  letter-spacing: .04rem;
+  transition: all .16s ease-in-out;
+  padding: 1rem;
+  outline: none;
+  cursor: pointer;
+  display: inline-block;
+  text-align: center;
+
+  &.-primary {
+    background-color: $color-primary;
+    color: #ffffff;
+
+    &:hover {
+      background-color: lighten($color-primary, 16%);
+    }
+
+    @media only screen and (min-width: $bp-small) {
+      font-size: 1.4rem;
+      min-width: 8rem;
+    }
+
+    @media only screen and (min-width: $bp-medium) {
+      font-size: 1.6rem;
+      min-width: 10rem;
+    }
+
+    @media only screen and (min-width: $bp-large) {
+      font-size: 1.8rem;
+      min-width: 12rem;
+    }
+
+    & + button.-primary {
+      margin-left: .5rem;
+    }
+  }
+
+  &.-light {
+    background-color: #ffffff;
+    color: $color-primary;
+
+    &:hover {
+      color: lighten($color-primary, 16%);
+    }
+  }
+}
+
+h1 {
+  font-size: 3.5rem;
+  color: $color-secondary;
+
+  @media only screen and (min-width: $bp-small) {
+    font-size: 3.75rem;
+  }
+
+  @media only screen and (min-width: $bp-medium) {
+    font-size: 4rem;
+  }
+
+  @media only screen and (min-width: $bp-large) {
+    font-size: 4.5rem;
+  }
+}
+
+h2 {
+  color: $color-secondary;
+  font-size: 2.25rem;
+  margin-bottom: 3rem;
+
+  @media only screen and (min-width: $bp-small) {
+    font-size: 2.75rem;
+  }
+
+  @media only screen and (min-width: $bp-medium) {
+    font-size: 3rem;
+  }
+
+  @media only screen and (min-width: $bp-large) {
+    font-size: 3.25rem;
+  }
+
+}
+
+p {
+  color: $color-neutral-dark;
+  font-size: 1.2rem;
+  line-height: 1.6;
+
+  & + p {
+    margin-top: 2rem;
+  }
+}
+
+p.-subtitle {
+  color: $color-secondary;
+  font-size: 1.4rem;
+  line-height: 1.4;
+
+  @media only screen and (min-width: $bp-medium) {
+    font-size: 2rem;
+  }
+
+  @media only screen and (min-width: $bp-large) {
+    font-size: 2.6rem;
+  }
+}
+
+p.-intro {
+  color: #888888;
+  font-size: 1.8rem;
+  line-height: 1.4;
+
+  h1 + & {
+    margin-top: 4rem;
+  }
+}
+// Patterns
+
+.big-list {
+  font-size: 1.6rem;
+  margin: 4rem 0;
+  list-style: none;
+  color: $color-primary;
+
+  li + li {
+    margin-top: 4rem;
+  }
+}
+
+.row {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+
+  @media only screen and (min-width: $bp-medium) {
+    flex-direction: row;
+  }
+}
+
+.col-2 {
+  width: 100%;
+  padding: 0 4rem;
+
+  & + .col-2 {
+    margin-top: 4rem;
+  }
+
+  @media only screen and (min-width: $bp-medium) {
+    width: 50%;
+
+    & + .col-2 {
+      margin-top: 0;
+    }
+  }
+}
+
+.col-4 {
+  width: 100%;
+  padding: 0 4rem;
+
+  & + .col-4 {
+    margin-top: 4rem;
+  }
+
+  @media only screen and (min-width: $bp-medium) {
+    width: 25%;
+
+    & + .col-4 {
+      margin-top: 0;
+    }
+  }
+}
+
+.hide-medium {
+  @media only screen and (max-width: $bp-medium) {
+    display: none;
+  }
+}
+
+
+// Header
+
+.header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 4rem;
+
+  .header-masthead {
+    max-height: 8rem;
+  }
+
+  .header-title {
+    max-height: 8rem;
+  }
+
+  .header-nav {
+    flex-grow: 1;
+    text-align: right;
+
+    a {
+      color: $color-secondary;
+      transition: color .16s ease-in-out;
+      font-size: 1.6rem;
+
+      &:hover {
+        color: $color-primary;
+      }
+
+      & + a {
+        margin-left: 3rem;
+      }
+    }
+  }
+}
+
+.header-homepage {
+  display: flex;
+  flex-direction: column;
+  min-height: 38vw;
+
+  @media only screen and (min-width: $bp-small) {
+    flex-direction: row;
+  }
+
+  .header-masthead {
+    background-color: $color-neutral;
+    padding: 8%;
+    min-height: 20rem;
+
+    @media only screen and (min-width: $bp-small) {
+      padding: 6%;
+      width: 50%;
+    }
+  }
+
+  .header-title {
+    display: block;
+    margin: 0 auto;
+    height: auto;
+    width: 100%;
+    max-width: 24rem;
+
+    @media only screen and (min-width: $bp-large) {
+      max-width: 32rem;
+    }
+  }
+
+  .header-content {
+    display: flex;
+    flex-direction: column;
+    padding: 8%;
+    min-height: 20rem;
+    text-align: center;
+
+    @media only screen and (min-width: $bp-small) {
+      width: 50%;
+      text-align: left;
+      padding: 6%;
+    }
+  }
+
+  .header-cta {
+    display: block;
+    margin: 1.5rem 0;
+
+    @media only screen and (min-width: $bp-small) {
+      margin: 2rem 0;
+    }
+
+    @media only screen and (min-width: $bp-medium) {
+      margin: 2.5rem 0;
+    }
+
+    @media only screen and (min-width: $bp-large) {
+      margin: 3rem 0;
+    }
+  }
+}
+
+
+// Main Sections
+
+.page-header {
+  padding: 4rem 4rem 16rem;
+}
+
+section {
+  padding: 4rem 2rem;
+
+  @media only screen and (min-width: $bp-small) {
+    padding: 8rem;
+  }
+
+  p {
+    font-size: 1.4rem;
+  }
+
+  .wrapper {
+    width: 100%;
+    max-width: 48rem;
+    margin: 0 auto;
+  }
+
+  .section-cta {
+    margin-top: 6rem;
+    .button {
+      margin: 0 auto;
+    }
+  }
+
+  &.about {
+    background-color: $color-neutral-light;
+  }
+
+  &.apply {
+
+    ol {
+      position: relative;;
+      font-size: 1.4rem;
+      margin: 4rem 0;
+      list-style-type: none;
+      counter-reset: applyCounter;
+    }
+
+    li {
+      margin-left: 4rem;
+      color: $color-primary;
+
+      & + li {
+        margin-top: 4rem;
+      }
+    }
+
+    li:before {
+      content: counter(applyCounter);
+      position: absolute;
+      counter-increment: applyCounter;
+      border: 2px solid $color-neutral;
+      border-radius: 50%;
+      width: 3rem;
+      height: 3rem;
+      font-size: 1.6rem;
+      text-align: center;
+      margin-top: -.75rem;
+      margin-left: -4rem;
+      line-height: 3rem;
+      font-weight: bold;
+      color: $color-primary;
+    }
+  }
+
+  &.-center {
+    h2 {
+      text-align: center;
+    }
+  }
+
+  &.-light {
+    background-color: $color-neutral-light;
+  }
+}
+
+
+// footer
+
+.footer {
+  background-color: $color-neutral;
+  padding: 4rem 0;
+
+  h3 {
+    font-size: 1.4rem;
+    color: #fff;
+  }
+
+  p {
+    line-height: 1.2;
+    margin: 1rem 0;
+  }
+}
+
+.footer-logo {
+  max-height: 12rem;
+}
+
+.footer-nav {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+
+  a {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: $color-secondary;
+    transition: color .16s ease-in-out;
+    line-height: 4rem;
+
+    &:hover {
+      color: darken($color-secondary, 24%);
+    }
+  }
+}

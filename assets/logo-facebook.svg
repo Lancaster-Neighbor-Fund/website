@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="48px" height="48px" viewBox="0 0 48 48" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 48.2 (47327) - http://www.bohemiancoding.com/sketch -->
+    <title>Shape</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Version-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" transform="translate(-523.000000, -2008.000000)">
+        <g id="flogo-RGB-HEX-Blk-72" transform="translate(523.000000, 2008.000000)" fill="#FFFFFF" fill-rule="nonzero">
+            <path d="M45.3333333,0 L2.66666667,0 C1.19390733,-9.01805001e-17 1.80361e-16,1.19390733 0,2.66666667 L0,45.3333333 C1.80361e-16,46.8060927 1.19390733,48 2.66666667,48 L25.64,48 L25.64,29.44 L19.4066667,29.44 L19.4066667,22.1733333 L25.64,22.1733333 L25.64,16.84 C25.64,10.64 29.4266667,7.26 34.9733333,7.26 C36.8393672,7.25454662 38.704325,7.35024255 40.56,7.54666667 L40.56,14 L36.7333333,14 C33.7266667,14 33.14,15.4333333 33.14,17.5333333 L33.14,22.16 L40.3333333,22.16 L39.4,29.4266667 L33.14,29.4266667 L33.14,48 L45.3333333,48 C46.8060927,48 48,46.8060927 48,45.3333333 L48,2.66666667 C48,1.19390733 46.8060927,9.01805001e-17 45.3333333,0 Z" id="Shape"></path>
+        </g>
+    </g>
+</svg>
