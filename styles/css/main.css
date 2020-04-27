@@ -12,6 +12,10 @@ a {
     color: #5622A2; }
   a:hover {
     color: #FF1171; }
+  a.language-link {
+    font-size: 1.2em;
+    margin-bottom: 2rem;
+    display: block; }
 
 body {
   display: flex;
@@ -56,6 +60,9 @@ body {
     color: #FF1171; }
     .button.-light:hover {
       color: #ff63a2; }
+
+p + .button {
+  margin-top: 2em; }
 
 h1 {
   font-size: 3.5rem;
@@ -150,6 +157,30 @@ p.-intro {
 @media only screen and (max-width: 64rem) {
   .hide-medium {
     display: none; } }
+
+.banner {
+  background-color: #FF1171;
+  color: #fff;
+  padding: 4em 8em; }
+  @media only screen and (max-width: 64rem) {
+    .banner {
+      padding: 2em 4em; } }
+  .banner .banner-wrapper {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between; }
+    @media only screen and (max-width: 64rem) {
+      .banner .banner-wrapper {
+        flex-direction: column; } }
+  .banner p {
+    color: #fff; }
+    @media only screen and (max-width: 64rem) {
+      .banner p {
+        text-align: center; } }
+  .banner .button {
+    background-color: #fff;
+    color: #FF1171; }
 
 .header {
   display: flex;
@@ -276,7 +307,7 @@ section {
   padding: 4rem 0; }
   .footer h3 {
     font-size: 1.4rem;
-    color: #fff; }
+    color: #FF1171; }
   .footer p {
     line-height: 1.2;
     margin: 1rem 0; }

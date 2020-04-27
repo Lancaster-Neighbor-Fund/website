@@ -26,6 +26,12 @@ a {
   &:hover {
     color: $color-primary;
   }
+
+  &.language-link {
+    font-size: 1.2em;
+    margin-bottom: 2rem;
+    display: block;
+  }
 }
 
 body {
@@ -85,6 +91,10 @@ body {
       color: lighten($color-primary, 16%);
     }
   }
+}
+
+p + .button {
+  margin-top: 2em;
 }
 
 h1 {
@@ -216,6 +226,40 @@ p.-intro {
 .hide-medium {
   @media only screen and (max-width: $bp-medium) {
     display: none;
+  }
+}
+
+.banner {
+  background-color: $color-primary;
+  color: #fff;
+  padding: 4em 8em;
+  @media only screen and (max-width: $bp-medium) {
+    padding: 2em 4em;
+  }
+
+
+  .banner-wrapper {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+
+    @media only screen and (max-width: $bp-medium) {
+      flex-direction: column;
+    }
+  }
+
+  p {
+    color: #fff;
+
+    @media only screen and (max-width: $bp-medium) {
+      text-align: center;
+    }
+  }
+
+  .button {
+    background-color: #fff;
+    color: $color-primary;
   }
 }
 
@@ -412,7 +456,7 @@ section {
 
   h3 {
     font-size: 1.4rem;
-    color: #fff;
+    color: $color-primary;
   }
 
   p {
