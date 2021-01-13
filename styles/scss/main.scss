@@ -83,6 +83,15 @@ body {
     }
   }
 
+  &.-disabled {
+    background-color: darken($color-primary, 15%);
+
+    &:hover  {
+      cursor: not-allowed;
+      background-color: darken($color-primary, 15%);
+    }
+  }
+
   &.-light {
     background-color: #ffffff;
     color: $color-primary;
